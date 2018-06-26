@@ -19,6 +19,7 @@ type pegawai struct {
 //ListAllAsnAPI unutk get data asn
 //LIST
 func ListAllAsnAPI(w http.ResponseWriter, req *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
 	if req.Method == http.MethodGet {
 		db, err := myconfig.GetMysqlConnect()
 		defer db.Close()
@@ -46,6 +47,7 @@ func ListAllAsnAPI(w http.ResponseWriter, req *http.Request) {
 //GetAsnAPI unutk get data asn
 //LIST
 func GetAsnAPI(w http.ResponseWriter, req *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
 	if req.Method == http.MethodGet {
 		id := req.FormValue("id")
 		db, err := myconfig.GetMysqlConnect()
