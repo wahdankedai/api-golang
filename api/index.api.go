@@ -41,10 +41,9 @@ func ListAllAsnAPI(w http.ResponseWriter, req *http.Request) {
 		w.Write(result)
 		return
 	}
-
 }
 
-//GetAsnAPI unutk get data asn
+//GetAsnAPI unutk get data asn berdasarkan id
 //LIST
 func GetAsnAPI(w http.ResponseWriter, req *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
@@ -70,5 +69,4 @@ func GetAsnAPI(w http.ResponseWriter, req *http.Request) {
 		w.Write(result)
 		return
 	}
-
 }
